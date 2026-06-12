@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="disco.xsl"?>
+<Kolekcija>
+
+    <Album>
+        <Naziv>Heaven or Hell</Naziv>
+        <Izvođač>Don Toliver</Izvođač>
+        <Omot>slike/heaven_or_hell.png</Omot>
+        <Godina>2020</Godina>
+        <Zanr>Trap / R&amp;B</Zanr>
+        <Izdavač>Cactus Jack / Atlantic</Izdavač>
+        <BrojPjesama>12</BrojPjesama>
+        <Trajanje>36:31</Trajanje>
+        <Cijena>12.99</Cijena>
+        <NajpoznatijaPjesma>No Idea</NajpoznatijaPjesma>
+        <SpotifyLink>https://open.spotify.com/album/7z4GhRfLqfSkqrj5F3Yt2B</SpotifyLink>
+        <Pjesme>
+            <Pjesma broj="1" trajanje="3:03">Heaven Or Hell</Pjesma>
+            <Pjesma broj="2" trajanje="3:36">Euphoria</Pjesma>
+            <Pjesma broj="3" trajanje="2:38">Cardigan</Pjesma>
+            <Pjesma broj="4" trajanje="2:47">After Party</Pjesma>
+            <Pjesma broj="5" trajanje="2:51">Wasted</Pjesma>
+            <Pjesma broj="6" trajanje="3:00">Can't Feel My Legs</Pjesma>
+            <Pjesma broj="7" trajanje="3:56">Candy</Pjesma>
+            <Pjesma broj="8" trajanje="3:24">Company</Pjesma>
+            <Pjesma broj="9" trajanje="2:37">Had Enough</Pjesma>
+            <Pjesma broj="10" trajanje="3:05">Spaceship</Pjesma>
+            <Pjesma broj="11" trajanje="2:55">No Photos</Pjesma>
+            <Pjesma broj="12" trajanje="2:34" hit="true">No Idea</Pjesma>
+        </Pjesme>
+    </Album>
+
+    <Album>
+        <Naziv>Life of a DON</Naziv>
+        <Izvođač>Don Toliver</Izvođač>
+        <Omot>slike/life_of_a_don.jpeg</Omot>
+        <Godina>2021</Godina>
+        <Zanr>Hip-Hop / R&amp;B</Zanr>
+        <Izdavač>Cactus Jack / Atlantic</Izdavač>
+        <BrojPjesama>16</BrojPjesama>
+        <Trajanje>51:34</Trajanje>
+        <Cijena>13.99</Cijena>
+        <NajpoznatijaPjesma>Drugs N Hella Melodies</NajpoznatijaPjesma>
+        <SpotifyLink>https://open.spotify.com/album/2WmJ5wp5wKBlIJE6FDAIBJ</SpotifyLink>
+        <Pjesme>
+            <Pjesma broj="1" trajanje="2:36">XSCAPE</Pjesma>
+            <Pjesma broj="2" trajanje="2:12">5X</Pjesma>
+            <Pjesma broj="3" trajanje="3:16">Way Bigger</Pjesma>
+            <Pjesma broj="4" trajanje="3:06">Flocky Flocky</Pjesma>
+            <Pjesma broj="5" trajanje="3:37">What You Need</Pjesma>
+            <Pjesma broj="6" trajanje="3:11">Double Standards</Pjesma>
+            <Pjesma broj="7" trajanje="4:48">Swangin' On Westheimer</Pjesma>
+            <Pjesma broj="8" trajanje="3:18" hit="true">Drugs N Hella Melodies</Pjesma>
+            <Pjesma broj="9" trajanje="2:45">2AM</Pjesma>
+            <Pjesma broj="10" trajanje="2:35">Get Throwed</Pjesma>
+            <Pjesma broj="11" trajanje="3:31">Company Pt. 2</Pjesma>
+            <Pjesma broj="12" trajanje="3:46">OUTERSPACE</Pjesma>
+            <Pjesma broj="13" trajanje="3:19">Smoke</Pjesma>
+            <Pjesma broj="14" trajanje="3:33">You</Pjesma>
+            <Pjesma broj="15" trajanje="2:39">Crossfaded</Pjesma>
+            <Pjesma broj="16" trajanje="3:19">Bogus</Pjesma>
+        </Pjesme>
+    </Album>
+
+    <Album>
+        <Naziv>Love Sick</Naziv>
+        <Izvođač>Don Toliver</Izvođač>
+        <Omot>slike/love_sick.jpg</Omot>
+        <Godina>2023</Godina>
+        <Zanr>R&amp;B / Soul</Zanr>
+        <Izdavač>Cactus Jack / Atlantic</Izdavač>
+        <BrojPjesama>20</BrojPjesama>
+        <Trajanje>52:49</Trajanje>
+        <Cijena>13.99</Cijena>
+        <NajpoznatijaPjesma>No Pole</NajpoznatijaPjesma>
+        <SpotifyLink>https://open.spotify.com/album/26z5llzd194mcCZHADWd6k</SpotifyLink>
+        <Pjesme>
+              <Pjesma broj="1" trajanje="3:07" hit="true">No Pole</Pjesma>
+              <Pjesma broj="2" trajanje="3:12">Embarrassed</Pjesma>
+              <Pjesma broj="3" trajanje="2:03">Geronimo</Pjesma>
+              <Pjesma broj="4" trajanje="3:14">Luckily I'm Having</Pjesma>
+              <Pjesma broj="5" trajanje="1:54">LoveSickness</Pjesma>
+              <Pjesma broj="6" trajanje="3:12">Let Her Go</Pjesma>
+              <Pjesma broj="7" trajanje="3:42">Leave The Club</Pjesma>
+              <Pjesma broj="8" trajanje="2:40">4 Me</Pjesma>
+              <Pjesma broj="9" trajanje="3:30">Go Down</Pjesma>
+              <Pjesma broj="10" trajanje="3:53">Time Heals All</Pjesma>
+              <Pjesma broj="11" trajanje="4:01">Leather Coat</Pjesma>
+              <Pjesma broj="12" trajanje="3:04">Honeymoon</Pjesma>
+              <Pjesma broj="13" trajanje="3:58">Private Landing</Pjesma>              
+              <Pjesma broj="14" trajanje="2:48">Slow Motion</Pjesma>            
+              <Pjesma broj="15" trajanje="2:54">Do It Right</Pjesma>             
+              <Pjesma broj="16" trajanje="3:28">If I Had</Pjesma>
+              <Pjesma broj="17" trajanje="3:00">Company Pt. 3</Pjesma>
+              <Pjesma broj="18" trajanje="3:56">Bus Stop</Pjesma>
+              <Pjesma broj="19" trajanje="3:46">Cinderella</Pjesma>
+              <Pjesma broj="20" trajanje="2:56">Encouragement</Pjesma>
+        </Pjesme>
+    </Album>
+
+    <Album>
+        <Naziv>Hardstone Psycho</Naziv>
+        <Izvođač>Don Toliver</Izvođač>
+        <Omot>slike/hardstone_psycho.jpg</Omot>
+        <Godina>2024</Godina>
+        <Zanr>Trap</Zanr>
+        <Izdavač>Cactus Jack / Atlantic</Izdavač>
+        <BrojPjesama>16</BrojPjesama>
+        <Trajanje>51:49</Trajanje>
+        <Cijena>14.99</Cijena>
+        <NajpoznatijaPjesma>Bandit</NajpoznatijaPjesma>
+        <SpotifyLink>https://open.spotify.com/album/0Kzb3u6kMnOJOZXYFSk33F</SpotifyLink>
+        <Pjesme>
+              <Pjesma broj="1" trajanje="3:02">KRYPTONITE</Pjesma>
+              <Pjesma broj="2" trajanje="2:06" hit="true">TORE UP</Pjesma>
+              <Pjesma broj="3" trajanje="3:22">BROTHER STONE</Pjesma>
+              <Pjesma broj="4" trajanje="2:41">ATTITUDE</Pjesma>
+              <Pjesma broj="5" trajanje="2:27">BANDIT</Pjesma>
+              <Pjesma broj="6" trajanje="3:48">GLOCK</Pjesma>
+              <Pjesma broj="7" trajanje="3:38">ICE AGE</Pjesma>
+              <Pjesma broj="8" trajanje="3:22">4X4</Pjesma>
+              <Pjesma broj="9" trajanje="3:27">PURPLE RAIN</Pjesma>
+              <Pjesma broj="10" trajanje="3:37">NEW DROP</Pjesma>
+              <Pjesma broj="11" trajanje="3:17">BACKSTREETS</Pjesma>
+              <Pjesma broj="12" trajanje="2:50">DEEP IN THE WATER</Pjesma>
+              <Pjesma broj="13" trajanje="4:10">INSIDE</Pjesma>
+              <Pjesma broj="14" trajanje="3:13">5 TO 10</Pjesma>
+              <Pjesma broj="15" trajanje="4:01">LAST LAUGH</Pjesma>
+              <Pjesma broj="16" trajanje="2:41">HARDSTONE NATIONAL ANTHEM</Pjesma>
+        </Pjesme>
+    </Album>
+
+    <Album>
+        <Naziv>OCTANE</Naziv>
+        <Izvođač>Don Toliver</Izvođač>
+        <Omot>slike/octane.jpg</Omot>
+        <Godina>2026</Godina>
+        <Zanr>Alternative Hip-Hop / Trap</Zanr>
+        <Izdavač>Donnway &amp; Co / Cactus Jack / Atlantic</Izdavač>
+        <BrojPjesama>18</BrojPjesama>
+        <Trajanje>49:52</Trajanje>
+        <Cijena>14.99</Cijena>
+        <NajpoznatijaPjesma>Secondhand</NajpoznatijaPjesma>
+        <SpotifyLink>https://open.spotify.com/album/131x9G87mD0hP0hGZc9qYN</SpotifyLink>
+        <Pjesme>
+              <Pjesma broj="1" trajanje="2:33">E85</Pjesma>
+              <Pjesma broj="2" trajanje="2:35">Body</Pjesma>
+              <Pjesma broj="3" trajanje="2:26">Rendezvous</Pjesma>
+              <Pjesma broj="4" trajanje="3:46" hit="true">Secondhand</Pjesma>
+              <Pjesma broj="5" trajanje="2:18">Tiramisu</Pjesma>
+              <Pjesma broj="6" trajanje="3:00">ATM</Pjesma>
+              <Pjesma broj="7" trajanje="1:39">Long Way To Calabasas</Pjesma>
+              <Pjesma broj="8" trajanje="3:14">Rosary</Pjesma>
+              <Pjesma broj="9" trajanje="3:20">All The Signs</Pjesma>
+              <Pjesma broj="10" trajanje="2:03">Call Back</Pjesma>
+              <Pjesma broj="11" trajanje="2:49">Tuition</Pjesma>
+              <Pjesma broj="12" trajanje="2:34">K9</Pjesma>
+              <Pjesma broj="13" trajanje="3:31">Excavator</Pjesma>
+              <Pjesma broj="14" trajanje="2:01">Gemstone</Pjesma>
+              <Pjesma broj="15" trajanje="2:37">OPPOSITE</Pjesma>
+              <Pjesma broj="16" trajanje="3:00">TMU</Pjesma>
+              <Pjesma broj="17" trajanje="2:57">Pleasure's Mine</Pjesma>
+              <Pjesma broj="18" trajanje="3:20">Sweet Home</Pjesma>
+        </Pjesme>
+    </Album>
+
+</Kolekcija>

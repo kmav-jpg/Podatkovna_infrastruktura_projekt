@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Toliver — Reviews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="disco.css" rel="stylesheet">
+  <style>
+    .reviews-page {
+      min-height: 100vh;
+      background: #000;
+      padding-top: 80px;
+    }
+
+    .reviews-hero {
+      padding: 60px 60px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(90,171,221,0.15);
+    }
+
+    .reviews-hero h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      color: #f8f8e3;
+      letter-spacing: 0.1em;
+    }
+
+    .reviews-hero p {
+      font-size: 13px;
+      color: #f7f493;
+      margin-top: 8px;
+      font-weight: 300;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5aabdd;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(90,171,221,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .back-link:hover { color: #fff; border-color: #fff; }
+
+    .albums-list {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 60px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .album-review-card {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .album-review-card:last-child { border-bottom: none; }
+
+    /* LIJEVO */
+    .arc-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .arc-year {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .arc-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .arc-artist {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      color: #e0ecf5;
+    }
+
+    .arc-divider {
+      width: 40px;
+      height: 2px;
+      margin: 4px 0;
+    }
+
+    .stars-row { display: flex; gap: 4px; margin-top: 4px; }
+
+    .star {
+      font-size: 22px;
+      cursor: pointer;
+      color: rgba(255,255,255,0.2);
+      transition: color 0.15s, transform 0.15s;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .star:hover, .star.active { transform: scale(1.15); }
+
+    .stars-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 4px;
+      font-weight: 300;
+    }
+
+    /* DESNO */
+    .arc-review {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 4px;
+    }
+
+    .review-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    textarea.review-input {
+      width: 100%;
+      min-height: 90px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 2px;
+      color: #e0ecf5;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.7;
+      padding: 14px 16px;
+      resize: vertical;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    textarea.review-input:focus { border-color: rgba(90,171,221,0.5); }
+    textarea.review-input::placeholder { color: rgba(255,255,255,0.2); }
+
+    .review-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-save {
+      padding: 10px 28px;
+      background: transparent;
+      border: 1.5px solid #5aabdd;
+      color: #5aabdd;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-save:hover { background: #5aabdd; color: #000; }
+
+    .save-msg {
+      font-size: 11px;
+      color: #5aabdd;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-weight: 300;
+    }
+
+    .save-msg.visible { opacity: 1; }
+
+    /* LISTA PRETHODNIH REVIEWOVA */
+    .past-reviews {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .past-reviews-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .past-review-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+    }
+
+    .past-review-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .past-review-stars {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .past-review-date {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      font-weight: 300;
+      margin-left: auto;
+    }
+
+    .past-review-text {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+    }
+
+    .btn-remove-review {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: rgba(255,255,255,0.15);
+      font-size: 14px;
+      cursor: pointer;
+      padding: 2px 6px;
+      transition: color 0.2s;
+      line-height: 1;
+    }
+
+    .btn-remove-review:hover { color: #ff4444; }
+
+    .no-reviews-msg {
+      font-size: 12px;
+      color: rgba(255,255,255,0.2);
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    /* Boje po albumu */
+    .album-review-card[data-album="heaven"] .arc-year,
+    .album-review-card[data-album="heaven"] .arc-title,
+    .album-review-card[data-album="heaven"] .star.active,
+    .album-review-card[data-album="heaven"] .past-review-stars { color: #ff6b35; }
+    .album-review-card[data-album="heaven"] .arc-divider { background: #ff6b35; }
+    .album-review-card[data-album="heaven"] .star:hover { color: #ff6b35; }
+
+    .album-review-card[data-album="life"] .arc-year,
+    .album-review-card[data-album="life"] .arc-title,
+    .album-review-card[data-album="life"] .star.active,
+    .album-review-card[data-album="life"] .past-review-stars { color: #ffd700; }
+    .album-review-card[data-album="life"] .arc-divider { background: #ffd700; }
+    .album-review-card[data-album="life"] .star:hover { color: #ffd700; }
+
+    .album-review-card[data-album="love"] .arc-year,
+    .album-review-card[data-album="love"] .arc-title,
+    .album-review-card[data-album="love"] .star.active,
+    .album-review-card[data-album="love"] .past-review-stars { color: #ff69b4; }
+    .album-review-card[data-album="love"] .arc-divider { background: #ff69b4; }
+    .album-review-card[data-album="love"] .star:hover { color: #ff69b4; }
+
+    .album-review-card[data-album="hardstone"] .arc-year,
+    .album-review-card[data-album="hardstone"] .arc-title,
+    .album-review-card[data-album="hardstone"] .star.active,
+    .album-review-card[data-album="hardstone"] .past-review-stars { color: #d4a373; }
+    .album-review-card[data-album="hardstone"] .arc-divider { background: #d4a373; }
+    .album-review-card[data-album="hardstone"] .star:hover { color: #d4a373; }
+
+    .album-review-card[data-album="octane"] .arc-year,
+    .album-review-card[data-album="octane"] .arc-title,
+    .album-review-card[data-album="octane"] .star.active,
+    .album-review-card[data-album="octane"] .past-review-stars { color: #f7f493; }
+    .album-review-card[data-album="octane"] .arc-divider { background: #f7f493; }
+    .album-review-card[data-album="octane"] .star:hover { color: #f7f493; }
+/*{ --accent: #f7f493; --text: #f8f8e3; --sub: #f4eab8; }*/
+    @media (max-width: 900px) {
+      .album-review-card { grid-template-columns: 1fr; gap: 24px; }
+      .albums-list { padding: 40px 24px 60px; }
+      .reviews-hero { padding: 40px 24px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="header-inner">
+      <span class="header-label">Diskografija</span>
+      <h1 class="header-title">DON TOLIVER</h1>
+      <a href="disco.xml" class="reviews-btn">← Diskografija</a>
+    </div>
+  </header>
+
+  <div class="reviews-page">
+    <div class="reviews-hero">
+      <h2>REVIEWS</h2>
+      <p>Dodaj review za svaki album — svi prethodni reviewi su vidljivi ispod forme</p>
+      <a href="disco.xml" class="back-link">← Natrag na diskografiju</a>
+    </div>
+    <div class="albums-list" id="albumsList"></div>
+  </div>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <span class="footer-name">DON TOLIVER</span>
+      <span class="footer-student">Kristijan Mavrović</span>
+      <span class="footer-copy">JMBAG: 0246126887</span>
+    </div>
+  </footer>
+
+  <script>
+    var albums = [
+      { slug: 'heaven',    naziv: 'Heaven or Hell',   godina: '2020' },
+      { slug: 'life',      naziv: 'Life of a Don',    godina: '2021' },
+      { slug: 'love',      naziv: 'Love Sick',        godina: '2023' },
+      { slug: 'hardstone', naziv: 'Hardstone Psycho', godina: '2024' },
+      { slug: 'octane',    naziv: 'Octane',           godina: '2026' }
+    ];
+
+    function loadReviews(slug) {
+      try {
+        var data = localStorage.getItem('reviews_' + slug);
+        return data ? JSON.parse(data) : [];
+      } catch(e) { return []; }
+    }
+
+    function saveReviews(slug, reviews) {
+      localStorage.setItem('reviews_' + slug, JSON.stringify(reviews));
+    }
+
+    function starsHtml(count) {
+      var s = '';
+      for (var i = 1; i <= 5; i++) s += i <= count ? '★' : '☆';
+      return s;
+    }
+
+    function formatDate(iso) {
+      var d = new Date(iso);
+      return d.toLocaleDateString('hr-HR', { day: '2-digit', month: '2-digit', year: 'numeric' }) +
+             ' ' + d.toLocaleTimeString('hr-HR', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function renderPastReviews(container, slug, accentColor) {
+      var reviews = loadReviews(slug);
+      container.innerHTML = '';
+
+      var label = document.createElement('div');
+      label.className = 'past-reviews-label';
+      label.textContent = 'Prethodni reviewi (' + reviews.length + ')';
+      container.appendChild(label);
+
+      if (reviews.length === 0) {
+        var msg = document.createElement('div');
+        msg.className = 'no-reviews-msg';
+        msg.textContent = 'Još nema reviewova za ovaj album.';
+        container.appendChild(msg);
+        return;
+      }
+
+      // Najnoviji prvi
+      var sorted = reviews.slice().reverse();
+      sorted.forEach(function(r, idx) {
+        var realIdx = reviews.length - 1 - idx;
+        var item = document.createElement('div');
+        item.className = 'past-review-item';
+        item.innerHTML =
+          '<div class="past-review-meta">' +
+            '<span class="past-review-stars">' + starsHtml(r.stars) + '</span>' +
+            '<span class="past-review-date">' + formatDate(r.date) + '</span>' +
+          '</div>' +
+          '<div class="past-review-text">' + r.text.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>' +
+          '<button class="btn-remove-review" title="Obriši ovaj review">✕</button>';
+
+        item.querySelector('.btn-remove-review').addEventListener('click', function() {
+          if (confirm('Obrisati ovaj review?')) {
+            var all = loadReviews(slug);
+            all.splice(realIdx, 1);
+            saveReviews(slug, all);
+            renderPastReviews(container, slug, accentColor);
+          }
+        });
+
+        container.appendChild(item);
+      });
+    }
+
+    function renderStars(container, slug, accentColor) {
+      container.innerHTML = '';
+      container._val = 0;
+      for (var i = 1; i <= 5; i++) {
+        (function(i) {
+          var star = document.createElement('span');
+          star.className = 'star';
+          star.textContent = '☆';
+          star.style.color = 'rgba(255,255,255,0.2)';
+          star.addEventListener('mouseover', function() {
+            var siblings = container.querySelectorAll('.star');
+            for (var s = 0; s < siblings.length; s++) {
+              siblings[s].textContent = s < i ? '★' : '☆';
+              siblings[s].style.color = s < i ? accentColor : 'rgba(255,255,255,0.2)';
+            }
+          });
+          star.addEventListener('mouseout', function() {
+            var siblings = container.querySelectorAll('.star');
+            for (var s = 0; s < siblings.length; s++) {
+              siblings[s].textContent = s < container._val ? '★' : '☆';
+              siblings[s].style.color = s < container._val ? accentColor : 'rgba(255,255,255,0.2)';
+            }
+          });
+          star.addEventListener('click', function() {
+            container._val = i;
+            var siblings = container.querySelectorAll('.star');
+            for (var s = 0; s < siblings.length; s++) {
+              siblings[s].textContent = s < i ? '★' : '☆';
+              siblings[s].style.color = s < i ? accentColor : 'rgba(255,255,255,0.2)';
+            }
+            var label = container.parentElement.querySelector('.stars-label');
+            if (label) label.textContent = i + '/5';
+          });
+          container.appendChild(star);
+        })(i);
+      }
+    }
+
+    var accentColors = {
+      heaven: '#ff6b35', life: '#ffd700', love: '#ff69b4',
+      hardstone: '#d4a373', octane: '#f7f493'
+    };
+
+    function buildCard(album) {
+      var accent = accentColors[album.slug] || '#5aabdd';
+      var card = document.createElement('div');
+      card.className = 'album-review-card';
+      card.setAttribute('data-album', album.slug);
+
+      card.innerHTML =
+        '<div class="arc-info">' +
+          '<span class="arc-year">' + album.godina + '</span>' +
+          '<div class="arc-title">' + album.naziv + '</div>' +
+          '<span class="arc-artist">Don Toliver</span>' +
+          '<div class="arc-divider"></div>' +
+          '<div class="stars-row" id="stars-' + album.slug + '"></div>' +
+          '<div class="stars-label"></div>' +
+        '</div>' +
+        '<div class="arc-review">' +
+          '<div class="review-label">Novi review</div>' +
+          '<textarea class="review-input" placeholder="Napiši svoje mišljenje o albumu..."></textarea>' +
+          '<div class="review-actions">' +
+            '<button class="btn-save">Dodaj review</button>' +
+            '<span class="save-msg">Dodano ✓</span>' +
+          '</div>' +
+          '<div class="past-reviews" id="past-' + album.slug + '"></div>' +
+        '</div>';
+
+      document.getElementById('albumsList').appendChild(card);
+
+      var starsContainer = document.getElementById('stars-' + album.slug);
+      renderStars(starsContainer, album.slug, accent);
+
+      var pastContainer = document.getElementById('past-' + album.slug);
+      renderPastReviews(pastContainer, album.slug, accent);
+
+      card.querySelector('.btn-save').addEventListener('click', function() {
+        var text = card.querySelector('.review-input').value.trim();
+        if (!text) { alert('Upiši review prije spremanja.'); return; }
+        var stars = starsContainer._val || 0;
+        var reviews = loadReviews(album.slug);
+        reviews.push({ text: text, stars: stars, date: new Date().toISOString() });
+        saveReviews(album.slug, reviews);
+        card.querySelector('.review-input').value = '';
+        starsContainer._val = 0;
+        renderStars(starsContainer, album.slug, accent);
+        card.querySelector('.stars-label').textContent = '';
+        var msg = card.querySelector('.save-msg');
+        msg.classList.add('visible');
+        setTimeout(function() { msg.classList.remove('visible'); }, 2000);
+        renderPastReviews(pastContainer, album.slug, accent);
+      });
+    }
+
+    albums.forEach(buildCard);
+  </script>
+
+</body>
+</html>
