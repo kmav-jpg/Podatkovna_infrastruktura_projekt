@@ -11,7 +11,7 @@
 5. Stranica se otvori automatski u pregledniku
 
 ### Stranice
-- glazba.xml — glavna diskografija s albumima, tracklistom i ocjenjivanjem
+- disco.xml — glavna diskografija s albumima, tracklistom i ocjenjivanjem
 - reviews.html — stranica za pisanje i pregled reviewova
 
 ### Napomena
