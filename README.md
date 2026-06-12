@@ -1,4 +1,4 @@
-# Podatkovna_infrastruktura_projekt
+# Podatkovna infrastruktura projekt
 ## Don Toliver — Diskografija
 
 ### Pokretanje projekta
