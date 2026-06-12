@@ -7,7 +7,7 @@
 2. Otvori folder u Visual Studio Code
 3. Instaliraj ekstenziju **Live Server** (ako već nije instalirana)
    - Extensions (Ctrl+Shift+X) → traži "Live Server" → Install
-4. Desni klik na index.html → Open with Live Server (dolje desno pise Go Live)
+4. Desni klik na index.html → Open with Live Server (ili dolje desno stisnuti Go Live)
 5. Stranica se otvori automatski u pregledniku
 
 ### Stranice
