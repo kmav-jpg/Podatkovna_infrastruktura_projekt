@@ -1,1 +1,18 @@
 # Podatkovna_infrastruktura_projekt
+## Don Toliver — Diskografija
+
+### Pokretanje projekta
+
+1. Preuzmi sve datoteke u isti folder
+2. Otvori folder u Visual Studio Code
+3. Instaliraj ekstenziju **Live Server** (ako već nije instalirana)
+   - Extensions (Ctrl+Shift+X) → traži "Live Server" → Install
+4. Desni klik na index.html → Open with Live Server
+5. Stranica se otvori automatski u pregledniku
+
+### Stranice
+- glazba.xml — glavna diskografija s albumima, tracklistom i ocjenjivanjem
+- reviews.html — stranica za pisanje i pregled reviewova
+
+### Napomena
+- Reviewi i ocjene se spremaju lokalno u preglednik (localStorage)
