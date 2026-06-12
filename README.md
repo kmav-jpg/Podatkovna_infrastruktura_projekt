@@ -1,5 +1,5 @@
 # Podatkovna infrastruktura projekt
-## Don Toliver — Diskografija
+## Don Toliver Diskografija
 
 ### Pokretanje projekta
 
