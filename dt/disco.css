@@ -1,6 +1,4 @@
-/* =============================================
-   VARIJABLE
-   ============================================= */
+/* VARIJABLE */
 :root {
   --accent: #c94a00;
   --text: #f0e6d3;
@@ -24,9 +22,7 @@ body {
   overflow-x: hidden;
 }
 
-/* =============================================
-   ALBUM SECTION - svaki album pun ekran
-   ============================================= */
+/* ALBUM SECTION - svaki album pun ekran */
 .album-section {
   position: relative;
   min-height: 100vh;
@@ -109,9 +105,7 @@ body {
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* =============================================
-   LAYOUT - 2 kolone
-   ============================================= */
+/* LAYOUT - 2 kolone */
 .album-content {
   position: relative;
   z-index: 2;
@@ -202,9 +196,7 @@ body {
   color: var(--text);
   font-weight: 300;
 }
-/* =============================================
-   DESNA KOLONA - tracklist u 2 stupca
-   ============================================= */
+/* DESNA KOLONA - tracklist u 2 stupca */
 .album-tracks {
   display: flex;
   flex-direction: column;
@@ -282,14 +274,14 @@ body {
   color: var(--accent);
 }
 
-/*BOJE PO ALBUMU */
+/* Boje po albumu */
 .album-section[data-album="heaven"]    { --accent: #ff6b35; --text: #fff5e6; --sub: #ffaa66; }
 .album-section[data-album="life"]      { --accent: #ffd700; --text: #fff8e7; --sub: #ffcc44; }
 .album-section[data-album="love"]      { --accent: #ff69b4; --text: #fff0f5; --sub: #ff99cc; }
 .album-section[data-album="hardstone"] { --accent: #d4a373; --text: #fefae0; --sub: #e9c46a; }
 .album-section[data-album="octane"]    { --accent: #f7f493; --text: #f8f8e3; --sub: #f4eab8; }
 
-/*HEADER I FOOTER */
+/* Header i footer */
 #site-header {
   position: fixed;
   top: 0;
@@ -366,9 +358,7 @@ body {
   color: #f8f8e3;
   font-weight: 300;
 }
-/* =============================================
-   RESPONSIVE
-   ============================================= */
+/* Responzivnost */
 @media (max-width: 1024px) {
   .album-content {
     grid-template-columns: 1fr;
@@ -397,9 +387,7 @@ body {
   .album-title { font-size: 2.8rem !important; }
 }
 
-/* =============================================
-   REVIEWS BTN U HEADERU
-   ============================================= */
+/* Review tipka - header */
 .reviews-btn {
   margin-left: auto;
   padding: 8px 22px;
@@ -420,7 +408,7 @@ body {
   color: #000;
 }
 
-/*ZVJEZDICE ZA OCJENJIVANJE */
+/*Zvjezdice za ocjenjivanje */
 .rating-stars {
   display: flex;
   align-items: center;
@@ -461,7 +449,7 @@ body {
   margin-left: 4px;
 }
 
-/* SPOTIFY LISTEN BUTTON (ispod svakog albuma) */
+/* Spotify button (ispod svakog albuma) */
 .album-spotify {
   margin-top: 20px;
 }
